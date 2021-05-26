@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="form">
+        <form
+          class="container"
+          id="container-signup"
+          onsubmit="onSignUp(event);"
+        >
+          <div class="auth">
+            <input type="text" id="name" placeholder="Username" />
+
+            <input type="email" id="email" placeholder="Email" />
+
+            <input type="number" id="phone" placeholder="Phone" />
+
+            <input type="address" id="address" placeholder="Address" />
+
+            <input type="password" id="passwd" placeholder="Password" />
+
+            <input
+              type="password"
+              id="confirm-passwd"
+              placeholder="Confirm Password"
+            />
+
+            <button type="submit">Register</button>
+            <p class="message">
+              Already Submitted ?<a href="#" onclick="hideLoginForm()">Login</a>
+            </p>
+          </div>
+        </form>
+
+        <form class="container-login" id="container-login">
+          <input type="text" id="login-name" placeholder="Username" />
+          <input type="password" id="login-passwd" placeholder="Password" />
+          <button type="submit" onclick="onLogin(event);">Login</button>
+          <p class="message">
+            Not Submitted ? <a href="#" onclick="showSignUpForm()">Register</a>
+          </p>
+        </form>
+
+        <div id="output">
+          <div id="show-name"></div>
+          <!-- Displaying Data -->
+          <h1>Login Success.</h1>
+          <button id="logout" onclick="onLogout()">Logout</button>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
